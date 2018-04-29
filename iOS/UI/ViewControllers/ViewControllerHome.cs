@@ -37,9 +37,10 @@ namespace Smart.iOS.UI.ViewControllers
 
             if (cell == null)
             {
-                cell = new UITableViewCell(UITableViewCellStyle.Default, "cellInHome");
+                cell = new UITableViewCell(UITableViewCellStyle.Subtitle, "cellInHome");
             }
             cell.TextLabel.Text = _menuItems[indexPath.Row].Title;
+            cell.DetailTextLabel.Text = _menuItems[indexPath.Row].Descrition;
 
             return cell;
         }
