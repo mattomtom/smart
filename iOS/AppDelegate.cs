@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using UIKit;
 
+using Smart.iOS.UI.ViewControllers;
+
 namespace Smart.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -21,10 +23,19 @@ namespace Smart.iOS
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
+            ViewControllerHome viewControllerHome = new ViewControllerHome();
+
+            UINavigationController navigationController = new UINavigationController(rootViewController: viewControllerHome);
+            navigationController.NavigationBar.Translucent = false;
+
+            Window = new UIWindow(frame: UIScreen.MainScreen.Bounds);
+            Window.RootViewController = navigationController;
+            Window.MakeKeyAndVisible();
+
             // Code to start the Xamarin Test Cloud Agent
-#if ENABLE_TEST_CLOUD
-			Xamarin.Calabash.Start();
-#endif
+            #if ENABLE_TEST_CLOUD
+            			Xamarin.Calabash.Start();
+            #endif
 
             return true;
         }

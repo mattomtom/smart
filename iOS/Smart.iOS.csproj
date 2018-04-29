@@ -97,23 +97,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="UI\" />
+    <Folder Include="Supporting Files\" />
+    <Folder Include="UI\ViewControllers\" />
+    <Folder Include="UI\Cells\" />
+    <Folder Include="UI\Views\" />
+    <Folder Include="DataSource\" />
+    <Folder Include="UI\ViewControllers\Code\" />
+    <Folder Include="UI\ViewControllers\XIB\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Supporting Files\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
+    <None Include="Supporting Files\Entitlements.plist" />
+    <None Include="Supporting Files\packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Supporting Files\Main.cs" />
+    <Compile Include="UI\ViewControllers\ViewControllerHome.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
