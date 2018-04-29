@@ -118,6 +118,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Supporting Files\Main.cs" />
     <Compile Include="UI\ViewControllers\ViewControllerHome.cs" />
+    <Compile Include="DataSource\TableViewHomeSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
