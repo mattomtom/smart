@@ -136,6 +136,9 @@
     <Compile Include="UI\Cells\Xib\TableViewOneCellXib.designer.cs">
       <DependentUpon>TableViewOneCellXib.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewControllers\Code\ViewControllerCollectionViewOneCode.cs" />
+    <Compile Include="DataSource\CollectionViewOneSourceCode.cs" />
+    <Compile Include="UI\Cells\Code\CVCellOne.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
