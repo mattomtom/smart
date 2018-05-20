@@ -139,6 +139,7 @@
     <Compile Include="UI\ViewControllers\Code\ViewControllerCollectionViewOneCode.cs" />
     <Compile Include="DataSource\CollectionViewOneSourceCode.cs" />
     <Compile Include="UI\Cells\Code\CVCellOne.cs" />
+    <Compile Include="Model\DataModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

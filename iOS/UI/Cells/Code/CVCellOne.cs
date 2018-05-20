@@ -11,27 +11,27 @@ namespace Smart.iOS
 
         public static readonly NSString CellId = new NSString("CVCellOne");
 
-        public string Text {
-            get {
-                return label.Text;
-            }
-            set {
-                label.Text = value;
-                SetNeedsDisplay();
-            }
+        [Export("initWithFrame:")]
+        public CVCellOne(RectangleF frame)
+        : base(frame)
+        {
+            TitleLabel = new UILabel();
+            TitleLabel.BackgroundColor = UIColor.Clear;
+            TitleLabel.TextColor = UIColor.DarkGray;
+            TitleLabel.TextAlignment = UITextAlignment.Center;
+
+            ContentView.AddSubview(TitleLabel);
         }
 
-        [Export("initWithFrame:")]
-        CVCellOne(RectangleF frame) : base(frame)
-        {
-            label = new UILabel(ContentView.Frame)
-            {
-                BackgroundColor = UIColor.Red,
-                TextColor = UIColor.Blue,
-                TextAlignment = UITextAlignment.Center
-            };
+        public UILabel TitleLabel { get; private set; }
 
-            ContentView.AddSubview(label);
+        public void UpdateRow(DataModel element)
+        {
+            TitleLabel.Text = element.Title;
+
+            TitleLabel.Font = UIFont.FromName("HelveticaNeue-Bold", 20);
+
+            TitleLabel.Frame = new RectangleF(0,50, 100, 100);
         }
     }
 }

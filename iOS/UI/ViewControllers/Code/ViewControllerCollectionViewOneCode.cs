@@ -6,7 +6,7 @@ namespace Smart.iOS
 {
     public class ViewControllerCollectionViewOneCode : UIViewController
     {
-        CollectionViewOneSourceCode _source;
+        CollectionViewOneSourceCode userSource;
         UICollectionViewLayout _layout;
         UICollectionView _collectionView;
 
@@ -23,19 +23,29 @@ namespace Smart.iOS
             _collectionView = new UICollectionView(UIScreen.MainScreen.Bounds, _layout);
             _collectionView.ContentSize = View.Frame.Size;
 
-            _source = new CollectionViewOneSourceCode();
+            //_source = new CollectionViewOneSourceCode();
 
-            _collectionView.RegisterClassForCell(typeof(CVCellOne), CVCellOne.CellId);
-            _collectionView.Source = _source;
+            //_collectionView.RegisterClassForCell(typeof(CVCellOne), CVCellOne.CellId);
+            //_collectionView.Source = _source;
         }
 
         public override void LoadView()
         {
-            base.LoadView();
+            base.ViewDidLoad();
 
-            _collectionView.BackgroundColor = UIColor.Green;
+            Title = "Collection";
 
-            View = _collectionView;
+            userSource = new CollectionViewOneSourceCode();
+
+            _collectionView.RegisterClassForCell(typeof(CVCellOne), CVCellOne.CellId);
+            _collectionView.ShowsHorizontalScrollIndicator = false;
+            _collectionView.Source = userSource;
+
+            userSource._dataModels.Add(new DataModel("Name 1"));
+           userSource._dataModels.Add(new DataModel("Name 2"));
+           userSource._dataModels.Add(new DataModel("Name 3"));
+
+            _collectionView.ReloadData();
         }
     }
 }

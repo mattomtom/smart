@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Foundation;
 using UIKit;
 
@@ -6,31 +7,37 @@ namespace Smart.iOS
 {
     public class CollectionViewOneSourceCode : UICollectionViewSource
     {
-        string[] data = { "One", "Two", "Three" };
+        public IList<DataModel> _dataModels;
+
+        public CollectionViewOneSourceCode()
+        {
+            _dataModels = new List<DataModel>();
+        }
+
+        public override nint NumberOfSections(UICollectionView collectionView)
+        {
+            return 1;
+        }
 
         public override nint GetItemsCount(UICollectionView collectionView, nint section)
         {
-            return data.Length;
+            return _dataModels.Count;
+        }
+
+        public override bool ShouldHighlightItem(UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            return true;
         }
 
         public override UICollectionViewCell GetCell(UICollectionView collectionView, NSIndexPath indexPath)
         {
             var cell = (CVCellOne)collectionView.DequeueReusableCell(CVCellOne.CellId, indexPath);
 
-            cell.Text = data[indexPath.Row];
+            DataModel data = _dataModels[indexPath.Row];
+
+            cell.UpdateRow(data);
 
             return cell;
         }
-
-        public override void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
-        {
-            Console.WriteLine("Row {0} selected", indexPath.Row);
-        }
-
-        public override bool ShouldSelectItem(UICollectionView collectionView, NSIndexPath indexPath)
-        {
-            return true;
-        }
-
     }
 }
