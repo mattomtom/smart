@@ -113,7 +113,7 @@ namespace Smart.iOS
                     Title = "List View I",
                     Descrition = "List View with custom cell.",
                     ViewControllerCode = new ViewControllerTableViewOneCode(),
-                    ViewControllerXib = new ViewControllerTableViewOneCode()
+                    ViewControllerXib = new ViewControllerTableViewOneXib()
                 },
 				new NavViewItem
                 {

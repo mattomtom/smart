@@ -3,7 +3,7 @@
 using Foundation;
 using UIKit;
 
-namespace Smart.iOS.UI.Cells.Xib
+namespace Smart.iOS
 {
     public partial class TableViewOneCellXib : UITableViewCell
     {
@@ -18,6 +18,12 @@ namespace Smart.iOS.UI.Cells.Xib
         protected TableViewOneCellXib(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
+        }
+
+        public void UpdateData(TableOneItem item)
+        {
+            _titleLabel.Text = item.Titile;
+            _textLabel.Text = item.Text;
         }
     }
 }

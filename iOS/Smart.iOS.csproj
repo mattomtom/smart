@@ -107,9 +107,12 @@
     <Folder Include="UI\ViewControllers\XIB\" />
     <Folder Include="UI\Cells\Code\" />
     <Folder Include="Model\" />
+    <Folder Include="UI\Cells\Xib\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Supporting Files\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="UI\ViewControllers\XIB\ViewControllerTableViewOneXib.xib" />
+    <InterfaceDefinition Include="UI\Cells\Xib\TableViewOneCellXib.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -124,6 +127,15 @@
     <Compile Include="DataSource\TableViewOneSource.cs" />
     <Compile Include="UI\Cells\Code\TableViewOneCell.cs" />
     <Compile Include="Model\TableOneItem.cs" />
+    <Compile Include="UI\ViewControllers\XIB\ViewControllerTableViewOneXib.cs" />
+    <Compile Include="UI\ViewControllers\XIB\ViewControllerTableViewOneXib.designer.cs">
+      <DependentUpon>ViewControllerTableViewOneXib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\TableViewOneSourceXib.cs" />
+    <Compile Include="UI\Cells\Xib\TableViewOneCellXib.cs" />
+    <Compile Include="UI\Cells\Xib\TableViewOneCellXib.designer.cs">
+      <DependentUpon>TableViewOneCellXib.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
