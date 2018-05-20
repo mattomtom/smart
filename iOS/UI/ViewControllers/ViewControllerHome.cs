@@ -119,7 +119,7 @@ namespace Smart.iOS
                 {
                     Title = "Collection View I",
                     Descrition = "Collection View",
-                    ViewControllerCode = new ViewControllerTableViewOneCode(),
+                    ViewControllerCode = new TwoViewController(),
                     ViewControllerXib = new ViewControllerTableViewOneCode()
                 }
             };
