@@ -1,8 +1,6 @@
 ﻿using Foundation;
 using UIKit;
 
-using Smart.iOS.UI.ViewControllers;
-
 namespace Smart.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the

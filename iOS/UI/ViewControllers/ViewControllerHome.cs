@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UIKit;
 
 using Foundation;
-using Smart.iOS.UI.ViewControllers.Code;
 
-namespace Smart.iOS.UI.ViewControllers
+namespace Smart.iOS
 {
     public class NavViewItem
     {
@@ -47,7 +46,7 @@ namespace Smart.iOS.UI.ViewControllers
 
 
 		public override nint RowsInSection(UITableView tableview, nint section)
-        {
+        {			
             return _menuItems.Count;
         }
 
@@ -111,10 +110,17 @@ namespace Smart.iOS.UI.ViewControllers
             {
                 new NavViewItem
                 {
-                    Title = "List View One",
-                    Descrition = "List View description",
-                    ViewControllerCode = new ViewControllerListViewOneCode(),
-                    ViewControllerXib = new ViewControllerListViewOneCode()
+                    Title = "List View I",
+                    Descrition = "List View with custom cell.",
+                    ViewControllerCode = new ViewControllerTableViewOneCode(),
+                    ViewControllerXib = new ViewControllerTableViewOneCode()
+                },
+				new NavViewItem
+                {
+                    Title = "Collection View I",
+                    Descrition = "Collection View",
+                    ViewControllerCode = new ViewControllerTableViewOneCode(),
+                    ViewControllerXib = new ViewControllerTableViewOneCode()
                 }
             };
         }

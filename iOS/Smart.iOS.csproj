@@ -105,6 +105,8 @@
     <Folder Include="DataSource\" />
     <Folder Include="UI\ViewControllers\Code\" />
     <Folder Include="UI\ViewControllers\XIB\" />
+    <Folder Include="UI\Cells\Code\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Supporting Files\LaunchScreen.storyboard" />
@@ -118,7 +120,10 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Supporting Files\Main.cs" />
     <Compile Include="UI\ViewControllers\ViewControllerHome.cs" />
-    <Compile Include="UI\ViewControllers\Code\ViewControllerListViewOneCode.cs" />
+    <Compile Include="UI\ViewControllers\Code\ViewControllerTableViewOneCode.cs" />
+    <Compile Include="DataSource\TableViewOneSource.cs" />
+    <Compile Include="UI\Cells\Code\TableViewOneCell.cs" />
+    <Compile Include="Model\TableOneItem.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
