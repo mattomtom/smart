@@ -136,6 +136,10 @@
     <Compile Include="UI\Cells\Xib\TableViewOneCellXib.designer.cs">
       <DependentUpon>TableViewOneCellXib.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ViewControllers\Code\ViewControllerAnimationFixedReturn.cs" />
+    <Compile Include="UI\ViewControllers\Code\ViewControllerAnimationAllSmooth.cs" />
+    <Compile Include="UI\ViewControllers\Code\ViewControllerAnimationAll.cs" />
+    <Compile Include="UI\ViewControllers\Code\ViewControllerAnimationFixedReturnSmooth.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

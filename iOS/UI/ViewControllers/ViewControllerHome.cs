@@ -28,6 +28,7 @@ namespace Smart.iOS
             base.ViewDidLoad();
 
             NavigationItem.Title = "Home";
+			NavigationController.NavigationBar.ShadowImage = new UIImage();
 		}
 
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -120,6 +121,34 @@ namespace Smart.iOS
                     Title = "Collection View I",
                     Descrition = "Collection View",
                     ViewControllerCode = new ViewControllerTableViewOneCode(),
+                    ViewControllerXib = new ViewControllerTableViewOneCode()
+                },
+				new NavViewItem
+                {
+                    Title = "Animation I",
+                    Descrition = "Ani",
+					ViewControllerCode = new ViewControllerAnimationFixedReturn(),
+                    ViewControllerXib = new ViewControllerTableViewOneCode()
+				},
+				new NavViewItem
+                {
+                    Title = "Animation I",
+                    Descrition = "Ani",
+                    ViewControllerCode = new ViewControllerAnimationFixedReturnSmooth(),
+                    ViewControllerXib = new ViewControllerTableViewOneCode()
+                },
+				new NavViewItem
+                {
+                    Title = "Animation I",
+                    Descrition = "Ani",
+                    ViewControllerCode = new ViewControllerAnimationAll(),
+                    ViewControllerXib = new ViewControllerTableViewOneCode()
+                },
+				new NavViewItem
+                {
+                    Title = "Animation I",
+                    Descrition = "Ani",
+                    ViewControllerCode = new ViewControllerAnimationAllSmooth(),
                     ViewControllerXib = new ViewControllerTableViewOneCode()
                 }
             };
