@@ -126,28 +126,28 @@ namespace Smart.iOS
 				new NavViewItem
                 {
                     Title = "Animation I",
-                    Descrition = "Ani",
+                    Descrition = "Bounce return with fixed control.",
 					ViewControllerCode = new ViewControllerAnimationFixedReturn(),
                     ViewControllerXib = new ViewControllerTableViewOneCode()
 				},
 				new NavViewItem
                 {
-                    Title = "Animation I",
-                    Descrition = "Ani",
+                    Title = "Animation II",
+					Descrition = "Smooth return with fixed control.",
                     ViewControllerCode = new ViewControllerAnimationFixedReturnSmooth(),
                     ViewControllerXib = new ViewControllerTableViewOneCode()
                 },
 				new NavViewItem
                 {
-                    Title = "Animation I",
-                    Descrition = "Ani",
+                    Title = "Animation III",
+					Descrition = "Bounce return with all control.",
                     ViewControllerCode = new ViewControllerAnimationAll(),
                     ViewControllerXib = new ViewControllerTableViewOneCode()
                 },
 				new NavViewItem
                 {
-                    Title = "Animation I",
-                    Descrition = "Ani",
+                    Title = "Animation IV",
+					Descrition = "Smooth return with all control.",
                     ViewControllerCode = new ViewControllerAnimationAllSmooth(),
                     ViewControllerXib = new ViewControllerTableViewOneCode()
                 }
