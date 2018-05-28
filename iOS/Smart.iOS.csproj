@@ -118,6 +118,7 @@
     <None Include="Info.plist" />
     <None Include="Supporting Files\Entitlements.plist" />
     <None Include="Supporting Files\packages.config" />
+    <None Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

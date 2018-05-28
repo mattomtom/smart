@@ -23,7 +23,7 @@ namespace Smart.iOS
             _verticleLine = CreateLine();
             _morph = CAKeyFrameAnimation.FromKeyPath("path");
 
-            _slider = new UISlider(new CGRect(0, View.Frame.Height - 120, View.Frame.Width, 44));
+            _slider = new UISlider(new CGRect(50, View.Frame.Height - 160, View.Frame.Width-100, 44));
             _slider.BackgroundColor = UIColor.White;
             _slider.MinValue = 0;
             _slider.MaxValue = 300;
